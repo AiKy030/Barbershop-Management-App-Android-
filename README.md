@@ -16,36 +16,12 @@ Built with Flutter. Version 1.1.0.
 - **Backup and restore** to a single file.
 - **Guided tutorial** on sample data, light and dark themes.
 
-## Run it
+## Built with
 
-You need the [Flutter SDK](https://docs.flutter.dev/get-started/install) (built with Flutter 3.47, Dart 3.13) and an Android phone with USB debugging on, or an emulator.
-
-```
-flutter pub get
-flutter run
-```
-
-| To do this | Run |
-| --- | --- |
-| Run the tests | `flutter test` |
-| Check for code problems | `flutter analyze` |
-| Build a debug APK | `flutter build apk --debug` |
-| Build a release APK | `flutter build apk --release` |
-
-## Release signing
-
-The release keystore and `android/key.properties` are not in this repository. Without them a release build is signed with debug keys, which is fine for trying the app.
-
-To sign your own release, create a keystore and an `android/key.properties` file:
-
-```
-storeFile=../keystore/your-release.jks
-storePassword=...
-keyAlias=...
-keyPassword=...
-```
-
-Keep both files backed up and out of version control. An installed app can only be updated by an APK signed with the same key.
+- Flutter and Dart, Android only
+- SQLite on the device, with versioned migrations that only ever add to the schema
+- Excel export and the Android share sheet
+- 183 automated tests covering the money rules, the database and the upgrade from older versions
 
 ## How the code is laid out
 
@@ -62,3 +38,11 @@ Rules the code holds throughout:
 - A sale keeps the price and percent it was made with; later changes in Settings never alter past sales.
 - Entries are voided, never deleted.
 - A database migration may only add tables and columns.
+
+## Ownership
+
+N. Barbershop was conceived, specified and designed by **Gian Kyle B. Villanueva** for a working barbershop: the problem, the business rules, the screens and the testing on the shop's phone.
+
+The code is shared here for viewing as part of a portfolio. It is not open source. Copying, modifying, distributing or publishing this app, in whole or in part, is not permitted without written permission.
+
+Copyright © 2026 Gian Kyle B. Villanueva. All rights reserved. See [LICENSE](LICENSE).
